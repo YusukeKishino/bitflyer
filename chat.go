@@ -12,7 +12,7 @@ type Chat struct {
 	Date     string `json:"date"`
 }
 
-const getChatsEndpoint = "getchats"
+const getChatsEndpoint = "/v1/getchats"
 
 func (c *Client) GetChats(fromDate ...time.Time) ([]Chat, error) {
 	query := url.Values{}

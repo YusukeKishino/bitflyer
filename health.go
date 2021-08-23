@@ -14,7 +14,7 @@ const (
 	Stop      Health = "STOP"
 )
 
-const getHealthEndpoint = "gethealth"
+const getHealthEndpoint = "/v1/gethealth"
 
 func (c *Client) GetHealth(productCode string) (Health, error) {
 	query := url.Values{}

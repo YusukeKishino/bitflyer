@@ -20,7 +20,7 @@ type Ticker struct {
 	VolumeByProduct float64 `json:"volume_by_product"`
 }
 
-const getTickerEndpoint = "ticker"
+const getTickerEndpoint = "/v1/ticker"
 
 // GetTicker https://lightning.bitflyer.com/docs?lang=ja#ticker
 func (c *Client) GetTicker(productCode string) (Ticker, error) {

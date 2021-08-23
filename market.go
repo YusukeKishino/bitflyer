@@ -13,7 +13,7 @@ type Market struct {
 	MarketType  string `json:"market_type"`
 }
 
-const getMarketsEndpoint = "markets"
+const getMarketsEndpoint = "/v1/markets"
 
 // GetMarkets https://lightning.bitflyer.com/docs?lang=ja#%E3%83%9E%E3%83%BC%E3%82%B1%E3%83%83%E3%83%88%E3%81%AE%E4%B8%80%E8%A6%A7
 func (c *Client) GetMarkets() ([]Market, error) {

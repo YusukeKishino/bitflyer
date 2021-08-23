@@ -15,7 +15,7 @@ type Execution struct {
 	SellChildOrderAcceptanceId string  `json:"sell_child_order_acceptance_id"`
 }
 
-const getExecutionsEndpoint = "executions"
+const getExecutionsEndpoint = "/v1/executions"
 
 // GetExecutions https://lightning.bitflyer.com/docs?lang=ja#%E7%B4%84%E5%AE%9A%E5%B1%A5%E6%AD%B4
 func (c *Client) GetExecutions(productCode string, pagination ...PaginationParam) ([]Execution, error) {

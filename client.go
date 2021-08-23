@@ -10,7 +10,7 @@ import (
 )
 
 const (
-	defaultBaseURL = "https://api.bitflyer.com/v1/"
+	defaultBaseURL = "https://api.bitflyer.com"
 )
 
 var defaultHttpClient = &http.Client{}

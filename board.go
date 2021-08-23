@@ -41,7 +41,7 @@ type BoardState struct {
 	} `json:"data"`
 }
 
-const getBoardEndpoint = "board"
+const getBoardEndpoint = "/v1/board"
 
 // GetBoard https://lightning.bitflyer.com/docs?lang=ja#%E6%9D%BF%E6%83%85%E5%A0%B1
 func (c *Client) GetBoard(productCode string) (Board, error) {
@@ -56,7 +56,7 @@ func (c *Client) GetBoard(productCode string) (Board, error) {
 	return board, nil
 }
 
-const getBoardStateEndpoint = "getboardstate"
+const getBoardStateEndpoint = "/v1/getboardstate"
 
 // GetBoardState https://lightning.bitflyer.com/docs?lang=ja#%E6%9D%BF%E3%81%AE%E7%8A%B6%E6%85%8B
 func (c *Client) GetBoardState(productCode string) (BoardState, error) {
