@@ -69,6 +69,8 @@ func (c *Client) getPublicEndpoint(endpoint string, query url.Values, dest inter
 	if err != nil {
 		return fmt.Errorf("GET %s: %w", endpoint, err)
 	}
+	defer res.Body.Close()
+
 	if res.StatusCode != http.StatusOK {
 		errMessage, err := io.ReadAll(res.Body)
 		if err != nil {
